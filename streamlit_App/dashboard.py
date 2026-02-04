@@ -22,7 +22,7 @@ def load_and_prepare_data():
     Cette fonction est mise en cache pour des performances optimales.
     """
     # REMPLACEZ 'votre_fichier.csv' par le chemin réel de votre fichier
-    df=pd.read_csv(r"C:\Users\hp\Desktop\works\donnees\modele_3966_Aug_Dec2025.csv")    
+    df=pd.read_csv("modele_3966_Aug_Dec2025.csv")    
     # Conversion de la colonne 'timestamp' en datetime
     df['timestamp'] = pd.to_datetime(df['timestamp'])
     # Tri par timestamp pour assurer la cohérence des séries temporelles
@@ -470,4 +470,5 @@ def main():
 # POINT D'ENTREE DE L'APPLICATION
 # -------------------------------
 if __name__ == "__main__":
+
     main()
