@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (optionnel - décommenter si vous ne voulez pas versionner les données)
+# data/*.csv
+
+# Logs
+*.log
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/

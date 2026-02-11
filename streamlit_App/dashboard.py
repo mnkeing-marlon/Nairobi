@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import os
+
 from datetime import datetime
 
 # -------------------------------
@@ -21,8 +23,9 @@ def load_and_prepare_data():
     Charge et prépare le jeu de données.
     Cette fonction est mise en cache pour des performances optimales.
     """
-    # REMPLACEZ 'votre_fichier.csv' par le chemin réel de votre fichier
-    df=pd.read_csv("modele_3966_Aug_Dec2025.csv")    
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    csv_path = os.path.join(script_dir, "modele_3966_Aug_Dec2025.csv")
+    df=pd.read_csv(csv_path)    
     # Conversion de la colonne 'timestamp' en datetime
     df['timestamp'] = pd.to_datetime(df['timestamp'])
     # Tri par timestamp pour assurer la cohérence des séries temporelles
