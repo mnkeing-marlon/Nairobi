@@ -9,7 +9,8 @@ __pycache__/
 venv/
 env/
 ENV/
-.venv
+.venv/
+.prophet/
 
 # Streamlit
 .streamlit/secrets.toml
@@ -25,10 +26,16 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Data (optionnel - décommenter si vous ne voulez pas versionner les données)
-# data/*.csv
+# Data — raw and processed CSVs are large; regenerate via pipeline
+data/raw_data/
+data/processed/
+data/*.csv
+
+# Model artifacts — regenerate via train_model.py
+models/*.joblib
 
 # Logs
+logs/
 *.log
 
 # Distribution / packaging
